@@ -15,12 +15,11 @@ struct ContactDetail: View {
             Image(systemName: "person.fill")
                 .resizable()
                 .frame(width: 170.0, height: 170.0)
-            
             ContactRowDetail(contact: contact)
                 .padding()
             Spacer()
         }
-        .font(.headline)
+//        .font(.headline)
         .padding()
         .navigationTitle(contact.fullName)
     }

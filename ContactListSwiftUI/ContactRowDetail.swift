@@ -18,12 +18,14 @@ struct ContactRowDetail: View {
                 Image(systemName: "phone")
                     .foregroundColor(.blue)
                 Text(contact.phone)
+                Spacer()
             }
             .padding()
             HStack {
                 Image(systemName: "tray")
                     .foregroundColor(.blue)
                 Text(contact.email)
+                Spacer()
             }
             .padding()
         }
