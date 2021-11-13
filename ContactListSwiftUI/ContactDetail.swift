@@ -11,12 +11,14 @@ struct ContactDetail: View {
     let contact: Person
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack() {
             Image(systemName: "person.fill")
                 .resizable()
                 .frame(width: 170.0, height: 170.0)
+            
             ContactRowDetail(contact: contact)
                 .padding()
+            Spacer()
         }
         .font(.headline)
         .padding()
