@@ -16,12 +16,16 @@ struct ContactRowDetail: View {
         VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "phone")
+                    .foregroundColor(.blue)
                 Text(contact.phone)
             }
+            .padding()
             HStack {
-                Image(systemName: "mail")
+                Image(systemName: "tray")
+                    .foregroundColor(.blue)
                 Text(contact.email)
             }
+            .padding()
         }
     }
 }

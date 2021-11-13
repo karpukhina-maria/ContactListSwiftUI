@@ -12,10 +12,11 @@ struct ContactDetail: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image(systemName: "person")
+            Image(systemName: "person.fill")
                 .resizable()
-                .frame(width: 150.0, height: 150.0)
+                .frame(width: 170.0, height: 170.0)
             ContactRowDetail(contact: contact)
+                .padding()
         }
         .font(.headline)
         .padding()

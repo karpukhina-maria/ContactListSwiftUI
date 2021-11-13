@@ -16,6 +16,7 @@ struct ContactList: View {
             NavigationLink(destination: ContactDetail(contact: contact)) {
                 ContactRow(contact: contact)
             }
+            .navigationBarTitle("Back")
         }
         .listStyle(.plain)
         .navigationTitle("Contact List")
