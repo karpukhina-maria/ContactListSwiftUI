@@ -6,8 +6,7 @@
 //
 import SwiftUI
 
-class Person: NSObject, Identifiable {
-    let id: Int
+class Person: Identifiable {
     let name: String
     let surname: String
     let phone: String
@@ -16,8 +15,7 @@ class Person: NSObject, Identifiable {
         "\(name) \(surname)"
     }
     
-    init(id: Int, name: String, surname: String, phone: String, email: String) {
-        self.id = id
+    init(name: String, surname: String, phone: String, email: String) {
         self.name = name
         self.surname = surname
         self.phone = phone
@@ -37,11 +35,12 @@ class Person: NSObject, Identifiable {
         
         for index in 0..<iterationCount {
             
-            let person = Person(id: index,
-                                name: names[index],
-                                surname: surnames[index],
-                                phone: phones[index],
-                                email: emails[index])
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                phone: phones[index],
+                email: emails[index]
+            )
             contactList.append(person)
         }
         return contactList
@@ -50,10 +49,11 @@ class Person: NSObject, Identifiable {
     static func getContact() -> Person {
         let dataManager = DataManager.shared
         
-        return Person(id: Int.random(in: 0...10),
-                      name: dataManager.names.randomElement() ?? "",
-                      surname: dataManager.surnames.randomElement() ?? "",
-                      phone: dataManager.phones.randomElement() ?? "",
-                      email: dataManager.emails.randomElement() ?? "")
+        return Person(
+            name: dataManager.names.randomElement() ?? "",
+            surname: dataManager.surnames.randomElement() ?? "",
+            phone: dataManager.phones.randomElement() ?? "",
+            email: dataManager.emails.randomElement() ?? ""
+        )
     }
 }
