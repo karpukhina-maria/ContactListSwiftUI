@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct ContactRow: View {
- //   @State private var isPresented = false
-
     let contact: Person
     
     var body: some View {
-            HStack {
-                Text("\(contact.name) \(contact.surname)")
-               
-            }
+        HStack {
+            Text("\(contact.name) \(contact.surname)")
+            
+        }
     }
 }
 

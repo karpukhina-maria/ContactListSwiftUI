@@ -36,14 +36,14 @@ class Person: NSObject, Identifiable {
         let iterationCount = min(names.count, surnames.count, phones.count, emails.count	)
         
         for index in 0..<iterationCount {
-            	
+            
             let person = Person(id: index,
                                 name: names[index],
                                 surname: surnames[index],
                                 phone: phones[index],
                                 email: emails[index])
             contactList.append(person)
-       }
+        }
         return contactList
     }
     

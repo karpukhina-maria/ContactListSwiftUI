@@ -19,7 +19,6 @@ struct ContactDetail: View {
                 .padding()
             Spacer()
         }
-//        .font(.headline)
         .padding()
         .navigationTitle(contact.fullName)
     }
