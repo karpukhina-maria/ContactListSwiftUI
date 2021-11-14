@@ -1,5 +1,5 @@
 //
-//  ContactRow.swift
+//  ContactRowDetail.swift
 //  ContactListSwiftUI
 //
 //  Created by Mary Jane on 11.11.2021.
